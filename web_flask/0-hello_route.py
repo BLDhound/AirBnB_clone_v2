@@ -1,10 +1,15 @@
+#!/usr/bin/python3
+"""module hello route of flask"""
 from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'], strict_slashes=False)
+
+@app.route('/', strict_slashes=False)
 def hello():
-    return "Hello HBNB!"
+    """Print first message"""
+    return 'Hello HBNB!'
+
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
